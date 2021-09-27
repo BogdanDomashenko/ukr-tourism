@@ -1,12 +1,26 @@
-* {
+/* * {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
+} */
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
 }
 
 
 a {
     text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 58px;
+}
+
+section {
+    padding: 70px 0;
 }
 
 
@@ -22,7 +36,7 @@ a {
 .header-text1 {
     font-weight: 800;
     font-size: 48px;
-    line-height: 70px;
+    line-height: 60px;
     background: linear-gradient(135deg, #FFA8A8 0%, #FCFF00 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -30,7 +44,6 @@ a {
 
 .p-text1 {
     font-weight: 500;
-    line-height: 33px;
     color: #FFF;
 }
 
@@ -89,8 +102,8 @@ a {
 }
 
 .nav-item .nav-link{
-    font-weight: 700;
-    font-size: 16px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-size: 18px;
     line-height: 25px;
     color: #FFF;
     padding-right: 20px;
@@ -121,7 +134,7 @@ a {
 
 /* header-info */
 .header-info {
-    height: 80vh;
+    height: 68vh;
     display: flex;
     align-items: center;
     background-image: url("../images/header/manSaly.svg");
@@ -132,12 +145,12 @@ a {
 
 .header-text {
     margin-top: 30px;
-    max-width: 700px;
+    max-width: 670px;
     background: rgba(0, 0, 0, 0.27);
     backdrop-filter: blur(100px);
     -moz-filter: blur(100px); 
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .header-btn {
@@ -146,6 +159,18 @@ a {
 
 .p-header {
     font-size: 20px;
+}
+
+.visited-countries {
+    background: #000;
+}
+
+.visited-countries-h1 {
+    font-size: 48px;
+    max-width: 700px;
+    line-height: 58px;
+    font-weight: 600;
+    color: #FFFFFF;
 }
 
 @media (max-width: 1650px) { 
