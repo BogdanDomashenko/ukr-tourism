@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdn.rawgit.com/mfd/09b70eb47474836f25a21660282ce0fd/raw/e06a670afcb2b861ed2ac4a1ef752d062ef6b46b/Gilroy.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>TourismAnalyzer - система аналізу туризму України</title>
 </head>
 <body>
@@ -51,22 +52,56 @@
                 <p class="p-text1 p-header">Інноваційний формат аналізу і подання статистичної інформації, який є результатом збору і аналізу усіх доступних статистичних даних, які тим чи іншим чином характеризують туризм.</p>
             </div>
             <div class="header-btn">
-                <button class="btn1">Переглянути</button>
+                <a href="#visited-countries">
+                    <button class="btn1">Переглянути</button>
+                </a>
             </div>
         </div>
     </div>
 </header>
 
-<section class="visited-countries">
+<section class="visited-countries" id="visited-countries">
     <div class="container">
-        <div class="row"><h1 class="visited-countries-h1">Країни до яких найбільше подорожують українці</h1></div>
+        <div class="row wow animate__animated animate__fadeInUp"><h1 class="visited-countries-h1">Країни до яких найбільше подорожують українці</h1></div>
+        <div class="line"></div>
         <div class="row">
-            wswssw
-        </div>
-
-        <div class="row">
-            <div class="col-md-7">
-                <canvas id="myChart" width="100%" height="40"></canvas>
+            <div class="col-sm-7">
+                <div class="visited-countries-list wow animate__animated animate__fadeInLeft" data-wow-delay="0.4s">
+                    <div class="visited-country-el">
+                        <div class="marker marker-blue"></div>
+                        <span>Єгипет</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-aqua"></div>
+                        <span>Туреччина</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-red"></div>
+                        <span>Об’єднані Арабські Емірати</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-green"></div>
+                        <span>Чорногорія</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-purple"></div>
+                        <span>Домініканська Республіка</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-yellow"></div>
+                        <span>Болгарія</span>
+                    </div>
+                    <div class="visited-country-el">
+                        <div class="marker marker-lightyellow"></div>
+                        <span>Інші</span>
+                    </div>
+                </div>
+                <div class="row wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+                    <canvas id="visitedCountriesChart" width="100%" height="40"></canvas>
+            </div>
+            </div>
+            <div class="col-sm-5 visited-countries-img wow animate__animated animate__backInRight" data-wow-delay="0.2s">
+                <img src="images/visited_countries/Saly2.svg" alt="man">
             </div>
         </div>
     </div>
@@ -74,5 +109,7 @@
 <script src="https://kit.fontawesome.com/bdf0e037a5.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="js/charts.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

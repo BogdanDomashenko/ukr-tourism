@@ -1,5 +1,5 @@
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+var visitedCountriesCtx = document.getElementById('visitedCountriesChart').getContext('2d');
+var visitedCountriesChart = new Chart(visitedCountriesCtx, {
     type: 'bar',
     data: {
         labels: [''],
