@@ -1,3 +1,4 @@
+
 new WOW().init();
 
 const anchors = document.querySelectorAll('a[href*="#"]')
@@ -14,3 +15,14 @@ for (let anchor of anchors) {
     })
   })
 }
+
+//count up
+const options = {
+    separator: ' ',
+  };
+  let demo = new CountUp('#internal-external-count', 1957410, options);
+  if (!demo.error) {
+    demo.start();
+  } else {
+    console.error(demo.error);
+  }

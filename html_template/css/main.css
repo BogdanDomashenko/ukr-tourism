@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 section {
-    padding: 70px 0;
+    padding: 90px 0;
 }
 
 
@@ -166,7 +166,7 @@ section {
     color: #FFFFFF;
 }
 
-.visited-countries-h1 {
+.h1 {
     font-size: 48px;
     max-width: 700px;
     line-height: 58px;
@@ -179,8 +179,15 @@ section {
     height: 4px;
     left: 160px;
     top: 1045px;
-    background: linear-gradient(180deg, #E3EEFF 0%, #ABC3FF 100%);
     border-radius: 39px;
+}
+
+.line-blue {
+    background: linear-gradient(180deg, #E3EEFF 0%, #ABC3FF 100%);
+}
+
+.line-blue-grad {
+    background: linear-gradient(90deg, #1E1771 0%, #27114A 100%);
 }
 
 .visited-countries-list {
@@ -238,9 +245,67 @@ section {
     margin-top: -150px;
 }
 
-.visited-countries-img img {
+.section-img img {
     width: 100%;
 }
+
+.internal-external {
+    background: linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%);
+}
+
+
+.internal-external-h1 {
+    background: linear-gradient(90deg, #1E1771 0%, #27114A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.int-ext {
+    display: flex;
+    justify-content: space-between;
+}
+
+.internal-external-img img {
+    width: 60%;
+}
+
+.internal-external-count {
+    font-style: normal;
+    font-weight: bold;
+    background: linear-gradient(90deg, #1E1771 0%, #27114A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 96px;
+    line-height: 116px;
+    margin: 20px 0;
+}
+
+.internal-external-count-extended {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(200px);
+    border-radius: 10px;
+    max-width: 349px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+.internal-external-count-extended-h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 72px;
+    line-height: 83px;
+    color: #F8E581;
+}
+
+.internal-external-count-extended-p {
+    margin: 10px 0;
+    font-weight: normal;
+    font-size: 30px;
+    color: #fff;
+}
+
 
 @media (max-width: 1650px) { 
     .header-info {
@@ -263,6 +328,9 @@ section {
     }
     .visited-countries-img {
         margin-top: -70px;
+    }
+    .internal-external-img img {
+        width: 90%;
     }
  }
 
@@ -296,6 +364,9 @@ section {
         display: inline-block;
     }
     .nav-items {
+        display: none;
+    }
+    .internal-external-img img {
         display: none;
     }
  }
@@ -347,5 +418,12 @@ section {
     }
     .visited-countries-img {
         display: none;
+    }
+    .internal-external-count {
+        font-size: 64px;
+    }
+    h1 {
+        font-size: 38px;
+        line-height: 45px;
     }
  }
