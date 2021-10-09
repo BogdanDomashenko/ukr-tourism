@@ -306,6 +306,107 @@ section {
     color: #fff;
 }
 
+.ukrainian-regions {
+    background: #000;
+    color: #fff;
+}
+
+.ukrainian-region {
+    background: url(../images/ukrainian-regions/Saly34.svg) no-repeat center;
+    background-size: 95%;
+    display: flex;
+    align-items: center;
+}
+
+.ukrainian-region-block {
+    background: rgba(79, 79, 79, 0.15);
+    backdrop-filter: blur(200px);
+    -moz-filter: blur(200px); 
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+.ukrainian-region-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 56px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+
+/* --------- MAP --------- */
+
+.ukraine-map {
+    position: relative;
+    text-align: center;
+}
+
+.ukraine-map_cont {
+    width: 100%;
+}
+
+.ukraine-map img {
+    vertical-align: middle;
+}
+
+.region-link path {
+    fill: #475BA4;
+    stroke-width: 0.5px;
+    stroke: #E8E8E8; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.region-link.notactive path {
+    fill: #303030;
+}
+
+.region-link:not(.notactive) path:hover {
+    fill: #344B78;    
+    transition: 0.3s;
+	  stroke: #fff; 
+}
+
+.region-point {
+    fill: #23324e ;
+    fill-opacity: 1;
+    stroke-width: 1;
+    stroke: #fff;
+    stroke-opacity: 1;
+    pointer-events: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.region-name {
+    pointer-events: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    font-size: 10px;
+    font-weight: 500;
+    stroke-width: 0;
+    stroke-opacity: 1; 
+    stroke: none;
+    fill: #fff;
+    font-size: 12px;
+    text-anchor: middle;
+}
+
+.region-name.notactive {
+  display: none
+}
+
+
+
+.region-name tspan {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/* -------- ./MAP ------ */
+
+
+
 
 @media (max-width: 1650px) { 
     .header-info {
@@ -368,6 +469,14 @@ section {
     }
     .internal-external-img img {
         display: none;
+    }
+    .ukrainian-region { 
+        background: #000;
+        justify-content: center;
+    }
+    .ukrainian-region-block {
+        margin-top: 20px;
+        background: rgba(79, 79, 79, 0.35);
     }
  }
 

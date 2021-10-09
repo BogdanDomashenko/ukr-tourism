@@ -16,13 +16,22 @@ for (let anchor of anchors) {
   })
 }
 
-//count up
-const options = {
-    separator: ' ',
-  };
-  let demo = new CountUp('#internal-external-count', 1957410, options);
-  if (!demo.error) {
-    demo.start();
-  } else {
-    console.error(demo.error);
+
+
+
+  // MAP
+
+
+  let map = document.getElementById('ukraine-map');
+  let regionNames = document.querySelectorAll('.mapsvg-region');
+
+  for(region in regionNames) {
+    console.log(regions[region].getAttribute('title'));
   }
+
+  map.addEventListener('click', event => {
+      if (event.target.className.baseVal == ' mapsvg-region') {
+        cityName = event.target.getAttribute('title');
+        let cityEl = document.getElementById(cityName);
+      }
+  });
