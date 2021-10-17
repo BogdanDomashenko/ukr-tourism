@@ -19,13 +19,23 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 58px;
 }
 
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    padding: 0;
+}
+
 section {
     padding: 90px 0;
 }
 
+html, body { overflow-x:hidden; }
+div {
+    margin: 0;
+}
+
 
 .header {
-    background-image: url(../images/header/header-bg.jpg); 
+    background-image: url(../images/header/bg3.png); 
     background-size: 100%;
     background-size: cover;
     min-height: 100vh;
@@ -174,12 +184,15 @@ section {
 }
 
 .line {
+    margin-top: 40px;
     max-width: 192px;
     width: 100%;
     height: 4px;
     left: 160px;
     top: 1045px;
     border-radius: 39px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .line-blue {
@@ -190,9 +203,13 @@ section {
     background: linear-gradient(90deg, #1E1771 0%, #27114A 100%);
 }
 
+.line-white {
+    background: #fff;
+}
+
 .visited-countries-list {
     color: #fff;
-    padding-top: 45px;
+    padding-top: 5px;
     padding-bottom: 15px;
 }
 
@@ -278,7 +295,7 @@ section {
     -webkit-text-fill-color: transparent;
     font-size: 96px;
     line-height: 116px;
-    margin: 20px 0;
+    margin: 0 0px 20px 0;
 }
 
 .internal-external-count-extended {
@@ -316,6 +333,7 @@ section {
     background-size: 95%;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .ukrainian-region-block {
@@ -335,6 +353,11 @@ section {
     margin: 0;
 }
 
+.map {
+    margin-top: 40px;
+    max-width: 100%;
+    width: 90%;
+}
 
 /* --------- MAP --------- */
 
@@ -406,6 +429,33 @@ section {
 /* -------- ./MAP ------ */
 
 
+.transport {
+    background: url(../images/transport/bg.png);
+    background-size: 100%;
+    background-size: cover;
+    color: #fff;
+}
+
+.transport-img img {
+    width: 90%;
+}
+
+.transport .line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-block {
+    max-width: 380px;
+}
+
+.transport-chart {
+    width: 100%;
+    height: 50px;
+    background: rgba(180, 192, 255, 0.45);
+    backdrop-filter: blur(20px);
+    border-radius: 119px 119px 70px 70px;
+}
 
 
 @media (max-width: 1650px) { 

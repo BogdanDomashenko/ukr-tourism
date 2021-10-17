@@ -1,4 +1,3 @@
-
 new WOW().init();
 
 const anchors = document.querySelectorAll('a[href*="#"]')
@@ -18,16 +17,12 @@ for (let anchor of anchors) {
 
 
 
-
   // MAP
 
 
   let map = document.getElementById('ukraine-map');
   let regionNames = document.querySelectorAll('.mapsvg-region');
 
-  for(region in regionNames) {
-    console.log(regions[region].getAttribute('title'));
-  }
 
   map.addEventListener('click', event => {
       if (event.target.className.baseVal == ' mapsvg-region') {
@@ -35,3 +30,16 @@ for (let anchor of anchors) {
         let cityEl = document.getElementById(cityName);
       }
   });
+
+
+  // transport-chart
+  const transportChart1 = document.querySelector('#transport-chart1');
+  const transportChart2 = document.querySelector('#transport-chart2');
+
+createTransportChart(transportChart1, 155, 124);
+createTransportChart(transportChart2, 155, 155);
+
+function createTransportChart(element, maxELCount, elCount) {
+  element.style.width = ((elCount/maxELCount)*100) + "%";
+  element.style.height = element.clientWidth + "px";
+}
