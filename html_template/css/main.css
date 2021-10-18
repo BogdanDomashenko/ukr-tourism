@@ -113,7 +113,7 @@ div {
 }
 
 .nav-item .nav-link{
-    font-family: 'Gilroy-Bold', sans-serif;
+    font-family: 'Gilroy', sans-serif;
     font-size: 18px;
     line-height: 25px;
     color: #FFF;
@@ -136,9 +136,6 @@ div {
 
 .nav-mobile-icon {
     color: #fff;
-    background: linear-gradient(135deg, #FFA8A8 0%, #FCFF00 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     font-size: 50px;
 }
 
