@@ -507,6 +507,11 @@ div {
     float: right;
 }
 
+.foreigners {
+    background: #000;
+    color: #fff;
+}
+
 
 @media (max-width: 1650px) { 
     .header-info {

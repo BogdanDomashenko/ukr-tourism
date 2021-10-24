@@ -71,6 +71,28 @@ methods: {
 },
 });
 
+new svgMap({
+  targetElementID: 'svgWorldMap',
+  data: {
+    data: {
+      gdp: {
+        name: 'Відвідало:',
+        format: '{0} чоловік',
+        thousandSeparator: ',',
+        thresholdMax: 50000,
+        thresholdMin: 1000
+      },
+    },
+    applyData: 'gdp',
+    values: {
+      AF: { gdp: 587},
+      AL: { gdp: 4583},
+      DZ: { gdp: 4293}
+      // ...
+    }
+  }
+});
+
 
 
   // transport-chart
