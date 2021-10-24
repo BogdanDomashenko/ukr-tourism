@@ -78,7 +78,7 @@ div {
 .navbar {
     position: fixed;
     width: 100%;
-
+    z-index: 100;
 }
 
 .nav-items, .nav-categories {
@@ -152,6 +152,8 @@ div {
 
 
 /* header-info */
+
+
 .header-info {
     padding-top: 150px;
     height: 68vh;
@@ -161,6 +163,26 @@ div {
     background-position: right 250px center;
     background-size: 25%;
     background-repeat: no-repeat;
+}
+
+.header-info-video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* height: 100vh; */
+}
+
+.header-info-video-media {
+    min-width: 100%;
+    max-height: 100vh;
+    /* min-height: 100%; */
+    object-fit: cover;
+}
+
+
+.header-content {
+    z-index: 100;
 }
 
 .header-text {
@@ -182,7 +204,9 @@ div {
 }
 
 .visited-countries {
-    background: #000;
+    background: url(../images/visited_countries/bg.png);
+    background-size: 100%;
+    background-size: cover;
     color: #FFFFFF;
 }
 
@@ -277,7 +301,8 @@ div {
 }
 
 .internal-external {
-    background: linear-gradient(90deg, #9796F0 0%, #FBC7D4 100%);
+    color: #fff;
+    background: #000;
 }
 
 
@@ -297,10 +322,11 @@ div {
     width: 60%;
 }
 
+
 .internal-external-count {
     font-style: normal;
     font-weight: bold;
-    background: linear-gradient(90deg, #1E1771 0%, #27114A 100%);
+    background: linear-gradient(90deg, #4436E3 0%, #6307F8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 96px;
@@ -309,7 +335,9 @@ div {
 }
 
 .internal-external-count-extended {
-    background: rgba(0, 0, 0, 0.45);
+    
+
+    background: rgba(155, 155, 155, 0.15);
     backdrop-filter: blur(200px);
     border-radius: 10px;
     max-width: 349px;
