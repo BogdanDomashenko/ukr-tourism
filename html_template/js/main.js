@@ -90,6 +90,7 @@ new svgMap({
       AF: { gdp: 587},
       AL: { gdp: 4583},
       DZ: { gdp: 4293},
+      DZ: { gdp: 4293}
     }
   }
 });
