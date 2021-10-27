@@ -15,32 +15,42 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/svgMap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/vue-ui-preloader/dist/loader.css">
     <link rel="stylesheet" href="css/main.css">
     <title>TourismAnalyzer - система аналізу туризму України</title>
 </head>
 <body>
-<header class="header">
+
+    
+<div id="appLoader" v-bind:class="{loaderDisable: isDisable}">
+    <loader object="#e100ff" color1="#ffffff" color2="#17fd3d" size="5" speed="1" bg="#000000" objectbg="#000000" opacity="100" disableScrolling="false" name="spinning"></loader>
+  </div>
+
+<header class="header" id="header">
     <nav class="navbar" id="navbar" v-bind:class="{sticky: isScrolling}">
-        <div class="container nav-upper">
+        <div class="container" v-bind:class="{'nav-upper': !isScrolling, 'nav-upper-sticky': isScrolling}">
             <div class="nav-main">
                 <a class="nav-mobile" v-on:click="greet">
                     <i class="bi bi-list nav-mobile-icon"></i>
                 </a>
                 <ul class="nav-items" id="nav-items1" v-bind:class="{ navMobileActive: isActive,  navMobileDisabled: !isActive}">
                     <li class="nav-item">
-                        <a href="" class="nav-link">Головна</a>
+                        <a href="" v-scroll-to="'#header'" class="nav-link">Головна</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Реалізації у туризмі</a>
+                        <a href="" v-scroll-to="'#internal-external'" class="nav-link">Кількість туристів</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Інвестиції</a>
+                        <a href="" v-scroll-to="'#visited-countries'" class="nav-link">Країни до яких подорожують</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Транспорт</a>
+                        <a href="" v-scroll-to="'#regions'" class="nav-link">Області</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" class="nav-link">Туроператори</a>
+                        <a href="" v-scroll-to="'#transport'" class="nav-link">Транспорт</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" v-scroll-to="'#foreigners'" class="nav-link">Іноземці</a>
                     </li>
                 </ul>
             </div>
@@ -52,11 +62,11 @@
         </div> -->
         <div class="container header-content">
             <h1 class="header-text1"> Ukrainian <br> Tourism Analyzer </h1>
-            <div class="header-text">
+            <div class="header-text block1">
                 <p class="p-text1 p-header">Інноваційний формат аналізу і подання статистичної інформації, який є результатом збору і аналізу усіх доступних статистичних даних, які тим чи іншим чином характеризують туризм.</p>
             </div>
             <div class="header-btn">
-                <a href="#visited-countries">
+                <a href="#internal-external">
                     <button class="btn1">Переглянути</button>
                 </a>
             </div>
@@ -64,10 +74,10 @@
     </div>
 </header>
 
-<section class="internal-external">
+<section class="internal-external" id="internal-external">
     <div class="container">
         <div class="row int-ext">
-            <div class="col-lg-4 internal-external-img  wow animate__animated animate__fadeInLeft">
+            <div class="col-lg-4 internal-external-img  wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
                 <img src="images/internal_external/Saly14.svg" alt="man">
             </div>
             <div class="col-lg-7 internal-external-content">
@@ -143,7 +153,7 @@
     </div>
 </section> 
 
-<section class="ukrainian-regions">
+<section class="ukrainian-regions" id="regions">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -432,7 +442,7 @@
     </div>
 </section>
 
-<section class="transport">
+<section class="transport" id="transport">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -607,15 +617,44 @@
     </div>
 </section>
 
-<section class="foreigners">
+<section class="foreigners" id="foreigners">
     <div class="container">
         <h1 class="h1">Розподіл іноземних туристів </h1>
         <p>за країнами з яких вони прибули</p>
         <div class="line line-white line-break"></div>
-        <div id="svgWorldMap"></div>
+        <div id="svgWorldMap" style="width: 95%;"></div>
     </div>
 </section>
 
+<section class="employment">
+    <div class="container">
+        <h1 class="h1">Зайнятість</h1>
+        <div class="line line-white line-break"></div>
+        <div class="row">
+            <div class="col-md-6 employment-left">
+                <div class="block1 employment-block1">
+                    <h2 class="h1">568 539</h2>
+                    <p class="p">в галузі зайнято обслуговуванням відвідувачів(без роздрібної торгівлі)</p>
+                </div>
+            </div>
+            <div class="col-md-6 employment-right">
+                <div class="row">
+                    <div class="block1 employment-block2 block-right">
+                        <h3 class="h1">4% - 22 741</h3>
+                        <p class="p">зайнятого населення</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="block1 employment-block3 block-right">
+                        <div class="man-chart" id="man-chart">
+                            <img src="images/employment/man.png" alt="" class="man-chart-img" v-for="i in 80">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <script src="https://kit.fontawesome.com/bdf0e037a5.js" crossorigin="anonymous"></script>
@@ -623,9 +662,13 @@
 <script src="js/charts.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 <script src="js/svg-pan-zoom.min.js"></script>
 <script src="js/svgMap.min.js"></script>
+<script src="https://unpkg.com/vue-ui-preloader"></script>
+
 
 <script src="js/main.js"></script>
+
 </body>
 </html>

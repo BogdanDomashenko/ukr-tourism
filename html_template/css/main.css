@@ -25,12 +25,19 @@ h1, h2, h3, h4, h5, h6, p, span {
 }
 
 section {
+    display: flex;
+    align-items: center;
     padding: 90px 0;
+    min-height: 85vh;
 }
 
 html, body { overflow-x:hidden; }
 div {
     margin: 0;
+}
+
+.loaderDisable {
+    display: none;
 }
 
 
@@ -45,13 +52,15 @@ div {
 
 .header-text1 {
     font-weight: 800;
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 64px;
+    line-height: 77px;
     color: #fff;
 }
 
 .p-text1 {
     font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
     color: #FFF;
 }
 
@@ -71,6 +80,11 @@ div {
 
 .btn1:hover {
     background: #978df3;
+}
+
+
+.block-right {
+    margin-left: auto;
 }
 
 /* ------- NAVBAR -------- */
@@ -94,6 +108,10 @@ div {
     padding: 20px 0;
 }
 
+.nav-upper-sticky {
+    padding: 10px 0;
+}
+
 .navbar .container {
     display: flex;
     flex-direction: row;
@@ -115,6 +133,7 @@ div {
 .nav-item .nav-link{
     font-family: 'Gilroy', sans-serif;
     font-size: 18px;
+    font-weight: 600;
     line-height: 25px;
     color: #FFF;
     padding-right: 20px;
@@ -188,11 +207,14 @@ div {
 .header-text {
     margin-top: 30px;
     max-width: 570px;
+}
+
+.block1 {
     background: rgba(0, 0, 0, 0.27);
     backdrop-filter: blur(100px);
     -webkit-backdrop-filter: blur(100px); 
     border-radius: 10px;
-    padding: 10px 20px;
+    padding: 15px 20px;
 }
 
 .header-btn {
@@ -512,6 +534,51 @@ div {
     color: #fff;
 }
 
+.employment {
+    background: url(../images/employment/bg.png);
+    background-size: 100%;
+    background-size: cover;
+    color: #fff;
+}
+
+.employment-block1 {
+    max-width: 400px;
+}
+
+.employment-block2 {
+    max-width: 50%;
+    text-align: end;
+    margin-left: auto;
+}
+
+.employment-block3 {
+    max-width: 440px;
+    margin-top: 20px;
+}
+
+.man-chart-img {
+    width: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.man-chart img {
+    padding: 0;
+    margin: 0;
+}
+
+.man-chart-img:not(:last-child) {
+    margin-right: 5px;
+}
+
+.man-chart-img-disable {
+    opacity: 0.5;
+}
+
+.man-chart-img-disable {
+    padding-left: 0;
+    margin-left: 0;
+}
 
 @media (max-width: 1650px) { 
     .header-info {

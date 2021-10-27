@@ -1,22 +1,25 @@
 new WOW().init();
 
-const anchors = document.querySelectorAll('a[href*="#"]')
+Vue.use(loader);
 
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault()
-    
-    const blockID = anchor.getAttribute('href').substr(1)
-    
-    document.getElementById(blockID).scrollIntoView({
-      behavior: 'smooth',
-      block: 'start'
-    })
-  })
-}
+new Vue({
+  el: '#appLoader',
+  components:{
+  loader:loader
+  },
+  data: {
+    isDisable: false
+  },
+  beforeMount() {
+    setTimeout(this.toggleLoader.bind(this), 1000);
+  },
+  methods: {
+    toggleLoader: function(event) {
+      this.isDisable = !this.isDisable;
+    }
+  }
 
-
-
+});
   // MAP
 
 
@@ -94,6 +97,40 @@ new svgMap({
     }
   }
 });
+
+let manChart = new Vue ({
+  el: '#man-chart',
+  data: {
+    items: [
+      {}
+    ]
+  },
+  methods: {
+    render: function(event) {
+      this.isActive = !this.isActive;
+    }
+  }
+});
+
+
+Vue.use(VueScrollTo);
+
+// You can also pass in the default options
+Vue.use(VueScrollTo, {
+     container: "body",
+     duration: 500,
+     easing: "ease",
+     offset: 0,
+     force: true,
+     cancelable: true,
+     onStart: false,
+     onDone: false,
+     onCancel: false,
+     x: false,
+     y: true
+ });
+
+
 
 
 
