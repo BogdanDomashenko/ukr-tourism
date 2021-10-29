@@ -40,6 +40,10 @@ div {
     display: none;
 }
 
+.appLoader {
+    z-index: 1000;
+}
+
 
 .header {
     background-image: url(../images/header/bg3.png); 

@@ -22,11 +22,11 @@
 <body>
 
     
-<div id="appLoader" v-bind:class="{loaderDisable: isDisable}">
+<div id="appLoader" class="appLoader" v-bind:class="{loaderDisable: isDisable}">
     <loader object="#e100ff" color1="#ffffff" color2="#17fd3d" size="5" speed="1" bg="#000000" objectbg="#000000" opacity="100" disableScrolling="false" name="spinning"></loader>
   </div>
 
-<header class="header" id="header">
+<header class="header section" id="header">
     <nav class="navbar" id="navbar" v-bind:class="{sticky: isScrolling}">
         <div class="container" v-bind:class="{'nav-upper': !isScrolling, 'nav-upper-sticky': isScrolling}">
             <div class="nav-main">
@@ -35,22 +35,25 @@
                 </a>
                 <ul class="nav-items" id="nav-items1" v-bind:class="{ navMobileActive: isActive,  navMobileDisabled: !isActive}">
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#header'" class="nav-link">Головна</a>
+                        <a href="#" v-scroll-to="'#header'" class="nav-link">Головна</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#internal-external'" class="nav-link">Кількість туристів</a>
+                        <a href="#" v-scroll-to="'#internal-external'" class="nav-link">Кількість туристів</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#visited-countries'" class="nav-link">Країни до яких подорожують</a>
+                        <a href="#" v-scroll-to="'#visited-countries'" class="nav-link">Країни до яких подорожують</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#regions'" class="nav-link">Області</a>
+                        <a href="#" v-scroll-to="'#regions'" class="nav-link">Області</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#transport'" class="nav-link">Транспорт</a>
+                        <a href="#" v-scroll-to="'#transport'" class="nav-link">Транспорт</a>
                     </li>
                     <li class="nav-item">
-                        <a href="" v-scroll-to="'#foreigners'" class="nav-link">Іноземці</a>
+                        <a href="#" v-scroll-to="'#foreigners'" class="nav-link">Іноземці</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" v-scroll-to="'#employment'" class="nav-link">Зайнятість</a>
                     </li>
                 </ul>
             </div>
@@ -74,7 +77,7 @@
     </div>
 </header>
 
-<section class="internal-external" id="internal-external">
+<section class="internal-external section" id="internal-external">
     <div class="container">
         <div class="row int-ext">
             <div class="col-lg-4 internal-external-img  wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
@@ -106,7 +109,7 @@
     </div>
 </section>
 
-<section class="visited-countries" id="visited-countries">
+<section class="visited-countries section" id="visited-countries">
     <div class="container">
         <div class="row wow animate__animated animate__fadeInUp"><h1 class="h1">Країни до яких найбільше подорожують українці</h1></div>
         <div class="line line-blue"></div>
@@ -153,7 +156,7 @@
     </div>
 </section> 
 
-<section class="ukrainian-regions" id="regions">
+<section class="ukrainian-regions section" id="regions">
     <div class="container">
         <div class="row">
             <div class="col-lg-7">
@@ -442,7 +445,7 @@
     </div>
 </section>
 
-<section class="transport" id="transport">
+<section class="transport section" id="transport">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -617,27 +620,27 @@
     </div>
 </section>
 
-<section class="foreigners" id="foreigners">
+<section class="foreigners section" id="foreigners">
     <div class="container">
-        <h1 class="h1">Розподіл іноземних туристів </h1>
-        <p>за країнами з яких вони прибули</p>
+        <h1 class="h1 wow animate__animated animate__fadeInUp" data-wow-delay="0s">Розподіл іноземних туристів </h1>
+        <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">за країнами з яких вони прибули</p>
         <div class="line line-white line-break"></div>
-        <div id="svgWorldMap" style="width: 95%;"></div>
+        <div id="svgWorldMap" class="wow animate__animated animate__fadeInRight" data-wow-delay="0.4s" style="width: 95%;"></div>
     </div>
 </section>
 
-<section class="employment">
+<section class="employment section" id="employment">
     <div class="container">
-        <h1 class="h1">Зайнятість</h1>
+        <h1 class="h1 wow animate__animated animate__fadeInUp" data-wow-delay="0s">Зайнятість</h1>
         <div class="line line-white line-break"></div>
         <div class="row">
-            <div class="col-md-6 employment-left">
+            <div class="col-md-6 employment-left wow animate__animated animate__fadeInLeft" data-wow-delay="0.2s">
                 <div class="block1 employment-block1">
                     <h2 class="h1">568 539</h2>
                     <p class="p">в галузі зайнято обслуговуванням відвідувачів(без роздрібної торгівлі)</p>
                 </div>
             </div>
-            <div class="col-md-6 employment-right">
+            <div class="col-md-6 employment-right wow animate__animated animate__fadeInRight" data-wow-delay="0.4s">
                 <div class="row">
                     <div class="block1 employment-block2 block-right">
                         <h3 class="h1">4% - 22 741</h3>
@@ -659,13 +662,15 @@
 
 <script src="https://kit.fontawesome.com/bdf0e037a5.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="js/charts.js"></script>
+<script src="js/modules/charts.js"></script>
 <script src="js/wow.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue-scrollto"></script>
 <script src="js/svg-pan-zoom.min.js"></script>
 <script src="js/svgMap.min.js"></script>
-<script src="https://unpkg.com/vue-ui-preloader"></script>
+<script src="js/vue-ui-preloader.js"></script>
+<script src="js/fullpage.js"></script>
+<!-- <script src="js/VueFullPage.js"></script> -->
 
 
 <script src="js/main.js"></script>

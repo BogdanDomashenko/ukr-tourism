@@ -20,6 +20,7 @@ new Vue({
   }
 
 });
+
   // MAP
 
 
@@ -34,6 +35,10 @@ new Vue({
       }
   });
 
+  // let abc = document.querySelectorAll('.mapsvg-region');
+  // for(i in abc) {
+  //     console.log(abc[i].getAttribute('title'));
+  // }
 
 // menu
 
@@ -130,8 +135,10 @@ Vue.use(VueScrollTo, {
      y: true
  });
 
+//  const el = document.querySelector('#internal-external');
+//  let elDistanceToTop = window.pageYOffset + el.getBoundingClientRect().top;
 
-
+//  alert(elDistanceToTop);
 
 
   // transport-chart
