@@ -41,7 +41,7 @@ div {
 }
 
 .appLoader {
-    z-index: 1000;
+    z-index: 1001;
 }
 
 
@@ -96,7 +96,7 @@ div {
 .navbar {
     position: fixed;
     width: 100%;
-    z-index: 100;
+    z-index: 1000;
 }
 
 .nav-items, .nav-categories {
@@ -248,11 +248,9 @@ div {
     max-width: 192px;
     width: 100%;
     height: 4px;
-    left: 160px;
-    top: 1045px;
     border-radius: 39px;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .line-blue {
@@ -663,6 +661,9 @@ div {
     .internal-external-img img {
         width: 90%;
     }
+    .employment-block2 {
+        max-width: 65%;
+    }
  }
 
  @media (max-width: 1100px) { 
@@ -732,6 +733,9 @@ div {
         margin-top: 20px;
         background: rgba(79, 79, 79, 0.35);
     }
+    .employment-block2 {
+        max-width: 100%;
+    }
  }
 
  @media (max-width: 768px) { 
@@ -741,9 +745,6 @@ div {
     }
     .header-text {
         max-width: 500px;
-    }
-    .header-info {
-        height: 80vh;
     }
     .visited-countries-img {
         display: flex;
@@ -756,6 +757,20 @@ div {
     }
     .transport-img {
         display: none;
+    }
+    .employment-block2 {
+        max-width: 50%;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .employment-block1 {
+        text-align: center;
+        margin: 0 auto;
+    }
+    .employment-block3 {
+        margin: 0 auto;
+        margin-top: 20px;
     }
  }
 
@@ -792,8 +807,46 @@ div {
     .internal-external-count {
         font-size: 64px;
     }
-    h1 {
+    .h1 {
         font-size: 38px;
-        line-height: 45px;
+        line-height: 40px;
+    }
+    .employment-block2 {
+        max-width: 75%;
+    }
+    .investements-img {
+        display: none;
+    }
+    .man-chart-img {
+        width: 11px;
+    }
+    .h1 {
+        font-size: 32px;
+        line-height: 46px;
+    }
+    .internal-external-count {
+        font-size: 48px;
+    }
+    .internal-external-count-extended-h2 {
+        font-size: 48px;
+        line-height: normal;
+    }
+    .internal-external-count-extended-p {
+        font-size: 28px;
+    }
+    .visited-countries-list {
+        font-size: 18px;
+    }
+    .visited-country-el:not(:last-child) {
+        margin-bottom: 5px;
+    }
+    .ukrainian-region-name {
+        font-size: 32px;
+    }
+    .ukrainian-region {
+        margin: 0 auto;
+    }
+    .ukrainian-region-block {
+        padding: 10px 20px;
     }
  }
