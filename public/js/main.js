@@ -152,3 +152,15 @@ Vue.use(VueScrollTo, {
 //   element.style.width = ((elCount/maxELCount)*100) + "%";
 //   element.style.height = element.clientWidth + "px";
 // }
+
+new Vue({
+  el: '#investemts-chart',
+  data: {
+      maxCount: 200,
+      years: [
+        {year: 2018, data: 200, color: '#E84D4D'},
+        {year: 2019, data: 140, color: '#06AB8D'},
+        {year: 2020, data: 130, color: '#6034BE'}
+      ]
+  }
+});

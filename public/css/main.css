@@ -545,6 +545,7 @@ div {
     color: #fff;
 }
 
+
 .employment-block1 {
     max-width: 400px;
 }
@@ -582,6 +583,59 @@ div {
 .man-chart-img-disable {
     padding-left: 0;
     margin-left: 0;
+}
+
+.investements {
+    background: #000;
+    color: #fff;
+}
+
+.investements-conut {
+    display: flex;
+    align-items: center;
+}
+
+.investements-conut-data {
+    margin-left: 10px;
+    font-size: 36px;
+}
+
+.investemts-chart {
+    display: flex;
+    padding-top: 40px;
+    height: 300px;
+}
+
+.investemts-chart-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.investemts-chart-pillar {
+    background: #fff;
+    width: 80px;
+}
+
+.investemts-chart-pillar:hover {
+    opacity: 0.7;
+}
+
+.investemts-chart-pillar:not(:last-child) {
+    margin-right: 20px;
+}
+
+.investemts-chart-block-count {
+    padding-bottom: 10px;
+}
+
+.investemts-chart-block-year {
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.investements-img {
+    width: 80%;
 }
 
 @media (max-width: 1650px) { 

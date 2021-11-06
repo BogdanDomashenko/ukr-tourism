@@ -55,3 +55,47 @@ var visitedCountriesChart = new Chart(visitedCountriesCtx, {
         },
       }
 });
+
+// var visitedCountriesCtx = document.getElementById('investementsData').getContext('2d');
+// var visitedCountriesChart = new Chart(visitedCountriesCtx, {
+//     type: 'bar',
+//     data: {
+//         labels: [''],
+//         datasets: [{
+//             label: '2018',
+//             data: [46.4],
+//             backgroundColor: "#E84D4D",
+//             hoverBackgroundColor: "#E38888"
+//         },{
+//             label: '2019',
+//             data: [39.7],
+//             backgroundColor: "#1FC2A5",
+//             hoverBackgroundColor: "#88E3B2"
+//         },{
+//             label: '2020',
+//             data: [7.6],
+//             backgroundColor: "#6034BE",
+//             hoverBackgroundColor: "#8A88E3"
+//         }]
+//     },
+//     options: {
+//         plugins: {
+//             legend: {
+//                 display: false
+//             }
+//         },
+//         indexAxis: 'x',
+//         responsive: true,
+//         scales: {
+//           x: {
+//             display: false,
+//             stacked: false,
+//           },
+//           y: {
+//             display: false,
+//             stacked: false
+//           }
+//         },
+//       }
+// });
+
